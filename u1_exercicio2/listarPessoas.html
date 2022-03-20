@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt_br">
+
 <head>
     <title>PWeb - by Xico Arruda</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/navigationBar.css">
+    <link rel="stylesheet" href="style/listarPessoa.css">
 </head>
 
 <body>
+    <ul>
+        <li>
+            <a href="index.html">Início</a>
+        </li>
+        <li>
+            <a href="adicionarPessoa.html">Adicionar pessoa</a>
+        </li>
+        <li class="active">
+            <a href="listarPessoas.html">Listar pessoas</a>
+        </li>
+        <li>
+            <a href="noticias.html">Canais de notícias</a>
+        </li>
+        <li>
+            <a href="contato.html">Mande um e-mail</a>
+        </li>
+        <li class="right">
+            <a href="sobre.html">Sobre o site</a>
+        </li>
+    </ul>
 
+    <div>
+        <h1>Listar de pessoas cadastradas</h1>
+
+        <table>
+            <tr>
+                <th>Nome completo</th>
+                <th>Data de nascimento</th>
+                <th>e-Mail</th>
+                <th>Sexo</th>
+                <th>Editar</th>
+                <th>Remover</th>
+            </tr>
+
+            <tr>
+                <td>José</td>
+                <td>01/01/1990</td>
+                <td><a href="mailto:jose@outro.com">jose@outro.com</a></td>
+                <td>Masculino</td>
+                <td><a href="editarPessoa.html">Editar</a></td>
+                <td><a href="#">Remover</a></td>
+            </tr>
+            
+            <tr>
+                <td>Maria</td>
+                <td>01/01/1890</td>
+                <td><a href="mailto:maria@outro.com">maria@outro.com</a></td>
+                <td>Feminino</td>
+                <td><a href="editarPessoa.html">Editar</a></td>
+                <td><a href="#">Remover</a></td>
+            </tr>
+            <tr>
+                <td>Pabllita</td>
+                <td>01/01/1900</td>
+                <td><a href="mailto:naoSei@outro.com">naoSei@outro.com</a></td>
+                <td>Não informado</td>
+                <td><a href="editarPessoa.html">Editar</a></td>
+                <td><a href="#">Remover</a></td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>

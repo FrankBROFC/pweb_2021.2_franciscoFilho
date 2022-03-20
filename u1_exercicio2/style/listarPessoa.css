@@ -1,0 +1,17 @@
+tr {
+    border-bottom: 1px solid #ddd;
+    align-items: flex-start;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
