@@ -2,10 +2,80 @@
 <html lang="pt_br">
 <head>
     <title>PWeb - by Xico Arruda</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/navigationBar.css">
+    <link rel="stylesheet" href="style/adicionarPessoa.css">
 </head>
 
 <body>
+    <ul>
+        <li>
+            <a href="index.html">Início</a>
+        </li>
+        <li class="active">
+            <a href="adicionarPessoa.html">Adicionar pessoa</a>
+        </li>
+        <li>
+            <a href="listarPessoas.html">Listar pessoas</a>
+        </li>
+        <li>
+            <a href="noticias.html">Canais de notícias</a>
+        </li>
+        <li>
+            <a href="contato.html">Mande um e-mail</a>
+        </li>
+        <li class="right">
+            <a href="sobre.html">Sobre o site</a>
+        </li>
+    </ul>
 
+    <div>
+        <h1>Formulário para cadastro de pessoas</h1>
+
+        <form action="adicionadaComSucesso.html"> 
+            <label for="">Nome completo *:</label>
+            <input type="text" required placeholder="Seu nome completo">
+
+            <br>
+            <br>
+
+            <label for="">Data de nascimento *:</label>
+            <input type="date" required>
+
+            <br>
+            <br>
+
+            <label for="">e-Mail *:</label>
+            <input type="email" required placeholder="nome@dominio.com">
+
+            <br>
+            <br>
+
+            <label for="">Sexo*:</label>
+            <br>
+            <br>
+            <input type="radio" required >
+            <label for="">Masculino</label>
+            <br>
+            <br>
+            <input type="radio" required>
+            <label for="">Feminino</label>
+            <br>
+            <br>
+            <input type="radio" required>
+            <label for="">Não informar</label>
+            <br>
+            <br>
+
+            <button type="reset">Limpar</button>
+            <button type="submit">Cadastrar!</button>
+
+            <br>
+
+            <p>* Campo obrigatório</p>
+        </form>
+    </div>
+    
 </body>
 
 </html>
