@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt_br" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Adicionar pessoa</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/navigationBar.css}">
+    <link rel="stylesheet" th:href="@{/css/adicionarPessoa.css}">
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="/">Início</a>
+        </li>
+        <li class="active">
+            <a href="/adicionarPessoa">Adicionar pessoa</a>
+        </li>
+        <li>
+            <a href="/listarPessoas">Listar pessoas</a>
+        </li>
+        <li>
+            <a th:href="@{/public/noticias.html}">Canais de notícias</a>
+        </li>
+        <li>
+            <a th:href="@{/public/contato.html}">Mande um e-mail</a>
+        </li>
+        <li class="right">
+            <a th:href="@{/public/sobre.html}">Sobre o site</a>
+        </li>
+    </ul>
+
+    <div>
+        <h1>Formulário para cadastro de pessoas</h1>
+
+        <form th:action="@{/adicionarPessoa}" method="post" th:object="${pessoa}">
+            <label>Nome completo *:</label>
+            <input type="text" required placeholder="Seu nome completo" th:field="*{nome}">
+
+            <br>
+            <br>
+
+            <label>Data de nascimento *:</label>
+            <input type="date" required th:field="*{dataNascimento}">
+
+            <br>
+            <br>
+
+            <label>e-Mail *:</label>
+            <input type="email" required placeholder="nome@dominio.com" th:field="*{email}">
+
+            <br>
+            <br>
+
+            <label>Sexo*:</label>
+            <br>
+            <br>
+            <input type="radio" required th:field="*{genero}" value="Masculino">
+            <label>Masculino</label>
+            <br>
+            <br>
+            <input type="radio" required th:field="*{genero}" value="Feminino">
+            <label>Feminino</label>
+            <br>
+            <br>
+            <input type="radio" required th:field="*{genero}" value="Não informar">
+            <label>Não informar</label>
+            <br>
+            <br>
+
+            <button type="reset">Limpar</button>
+            <button type="submit">Cadastrar!</button>
+
+            <br>
+
+            <p>* Campo obrigatório</p>
+        </form>
+    </div>
+    
+</body>
+
+</html>

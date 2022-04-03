@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <title>Lista de pessoas</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/navigationBar.css}">
+    <link rel="stylesheet" th:href="@{/css/listarPessoa.css}">
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="/">Início</a>
+        </li>
+        <li>
+            <a href="/adicionarPessoa">Adicionar pessoa</a>
+        </li>
+        <li class="active">
+            <a href="/listarPessoas">Listar pessoas</a>
+        </li>
+        <li>
+            <a th:href="@{/public/noticias.html}">Canais de notícias</a>
+        </li>
+        <li>
+            <a th:href="@{/public/contato.html}">Mande um e-mail</a>
+        </li>
+        <li class="right">
+            <a th:href="@{/public/sobre.html}">Sobre o site</a>
+        </li>
+    </ul>
+
+    <div>
+        <h1>Listar de pessoas cadastradas</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Nome completo</th>
+                <th>Data de nascimento</th>
+                <th>e-Mail</th>
+                <th>Sexo</th>
+                <th>Editar</th>
+                <th>Remover</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="pessoa: ${pessoas}">
+                    <td th:text="${pessoa.nome}"></td>
+                    <td th:text="${#temporals.format(pessoa.dataNascimento,'dd/MM/yyyy')}"></td>
+                    <td><a th:href="'mailto:'+${pessoa.email}" th:text="${pessoa.email}"></a></td>
+                    <td th:text="${pessoa.genero}"></td>
+                    <td><a th:href="@{/editarPessoa/{id}(id=${pessoa.id})}">Editar</a></td>
+                    <td><a th:href="@{/deletar/{id}(id=${pessoa.id})}">Remover</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_br" xmlns:th="http://thymeleaf.org">
+
+<head xmlns:th="http://thymeleaf.org">
+    <title>PWeb - by Francisco Filho</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/navigationBar.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+
+<body>
+    <ul>
+        <li class="active">
+            <a href="/index">Início</a>
+        </li>
+        <li>
+            <a href="/adicionarPessoa">Adicionar pessoa</a>
+        </li>
+        <li>
+            <a href="/listarPessoas">Listar pessoas</a>
+        </li>
+        <li>
+            <a th:href="@{/public/noticias.html}">Canais de notícias</a>
+        </li>
+        <li>
+            <a th:href="@{/public/contato.html}">Mande um e-mail</a>
+        </li>
+        <li class="right">
+            <a th:href="@{/public/sobre.html}">Sobre o site</a>
+        </li>
+    </ul>
+
+    <h1>Hidrate-se</h1>
+
+    <img th:src="@{/imagens/copoAgua.jpeg}" alt="Água gelada!">
+
+</body>
+
+</html>
