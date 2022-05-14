@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema PWeb</title>
+
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sistema PWeb</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Produtos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class=".container">
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <h1 class="display-4">Bem-vindo(a) ao sistema web que serviu como avaliação técnica</h1>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            <h5>Docente: Xico Arruda Discente: Francisco Filho</h5>
+        </figcaption>
+    </figure>
+
+    <p class="lead">
+        O propósito é construir um sistema de informação para cadastro de clientes, de produtos e de pedidos
+        de doces ou chocolates para uma única loja.
+    </p>
+    <p class="lead">
+        O sistema conterá cadastro os clientes, cadastro de produtos, registro de pedidos com vários itens,
+        registro do tipo e o valor do pagamento efetuado, entre outras funcionalidades. Além disso, o sistema é
+        responsável pela emissão de alguns relatórios gerenciais, contendo quantidade de pedidos, faturamento e
+        lucro da loja em um período de tempo determinado.
+    </p>
+</div>
+</body>
+</html>
