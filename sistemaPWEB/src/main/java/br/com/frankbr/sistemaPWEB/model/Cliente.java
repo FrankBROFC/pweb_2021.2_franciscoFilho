@@ -18,7 +18,7 @@ public class Cliente implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
     private long id;
     private String nome;
-    private Genero genero;
+    private String genero;
     @OneToOne
     private Endereco endereco;
     private String email;

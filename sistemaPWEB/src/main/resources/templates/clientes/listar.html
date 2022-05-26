@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sistema PWeb</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Produtos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Genêro</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="cliente: ${clientes}">
+            <td th:text="${cliente.nome}"></td>
+            <td th:text="${cliente.genero}"></td>
+            <td th:text="${cliente.endereco.endereco}"></td>
+            <td><a th:href="'mailto:'+${cliente.email}" th:text="${cliente.email}"></a></td>
+            <td th:text="${cliente.telefone}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
